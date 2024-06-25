@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
 					modifier = Modifier.fillMaxSize(),
 					color = MaterialTheme.colorScheme.background
 				) {
-					Greeting(BuildConfig.apiKey)
+					KeyTesting(BuildConfig.apiKey)
 				}
 			}
 		}
@@ -30,9 +30,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun KeyTesting(name: String, modifier: Modifier = Modifier) {
 	Text(
-		text = "Hello $name!",
+		text = "$name",
 		modifier = modifier
 	)
 }
@@ -41,6 +41,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
 	SecretGradleTheme {
-		Greeting("Android")
+		KeyTesting("TEST KEY")
 	}
 }
